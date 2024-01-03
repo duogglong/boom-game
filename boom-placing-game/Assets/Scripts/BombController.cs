@@ -39,11 +39,10 @@ public class BombController : MonoBehaviour
     private IEnumerator PlaceBomb()
     {
         Vector2 position = transform.position;
-        //Debug.Log(position.x + " " + position.y);
 
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-        Debug.Log(position.x + " " + position.y);
+        //Debug.Log(position.x + " " + position.y);
 
         GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bombsRemaining--;
@@ -73,9 +72,9 @@ public class BombController : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Log 1: " + position + " " + direction);
+        //Debug.Log("Log 1: " + position + " " + direction);
         position += direction;
-        Debug.Log("Log 2: " + position);
+        //Debug.Log("Log 2: " + position);
 
         if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
         {
@@ -84,7 +83,7 @@ public class BombController : MonoBehaviour
         }
 
         Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
-        Debug.Log(length);
+        //Debug.Log(length);
         explosion.SetActiveRenderer(length > 1 ? explosion.middle : explosion.end);
         //explosion.SetActiveRenderer(explosion.end);
         explosion.SetDirection(direction);

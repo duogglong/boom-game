@@ -4,6 +4,7 @@ Builds/
 Logs/
 UserSettings/
 Build/
+boom-placing-game/obj/Debug/
 
 *.obj
 *.pdb
