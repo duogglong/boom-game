@@ -25,4 +25,22 @@ public class Explosion : MonoBehaviour
     {
         Destroy(gameObject, seconds);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        BrickController brick = collision.GetComponent<BrickController>();
+        Player player = collision.GetComponent<Player>();
+        EnemyController enemy = collision.GetComponent<EnemyController>();
+        if (brick != null)
+        {
+            brick.changeStateBrick(TypeBrick.BREAKING);
+        }
+        if (player != null)
+        {
+            player.OnDead();
+        }
+        if (enemy != null)
+        {
+            enemy.Ondead();
+        }
+    }
 }

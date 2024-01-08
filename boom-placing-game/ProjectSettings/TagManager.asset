@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PosWin
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Brick
+    uniqueID: 964761507
+    locked: 0
+  - name: Player
+    uniqueID: 2940488181
+    locked: 0
+  - name: FX
+    uniqueID: 846889699
     locked: 0
